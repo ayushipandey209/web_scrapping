@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPath Examples</title>
+</head>
+<body>
+    <!-- Global vs. Relative Context -->
+    <!-- XPath: //div -->
+    <div id="global">Global div</div>
+    <!-- XPath: .//div -->
+    <div id="relative">Relative div</div>
+
+    <!-- Absolute Path vs. Relative Path -->
+    <!-- XPath: /html/body/div -->
+    <div id="absolute">Absolute div</div>
+    <!-- XPath: //div -->
+    <div id="relative-path">Relative path div</div>
+
+    <!-- Wildcards -->
+    <!-- XPath: //div/* -->
+    <div id="wildcard">
+        <span>Child span of div</span>
+        <p>Child paragraph of div</p>
+    </div>
+    <!-- XPath: //@* -->
+    <a href="https://example.com" title="Example">Example Link</a>
+
+    <!-- Predicates -->
+    <!-- XPath: //ul/li[1] -->
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+    </ul>
+    <!-- XPath: //ul/li[last()] -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Last item</li>
+    </ul>
+    <!-- XPath: //div[@class='example'] -->
+    <div class="example">Div with class example</div>
+
+    <!-- Attributes -->
+    <!-- XPath: //img/@src -->
+    <img src="image.jpg" alt="Example Image">
+    <!-- XPath: //a[@href='https://example.com'] -->
+    <a href="https://example.com">Specific Link</a>
+
+    <!-- Text Nodes -->
+    <!-- XPath: //p/text() -->
+    <p>This is a paragraph.</p>
+    <!-- XPath: //h1[contains(text(), 'Welcome')] -->
+    <h1>Welcome to XPath Examples</h1>
+
+    <!-- Axes -->
+    <!-- XPath: /html/body/child::div -->
+    <div id="child-axis">Child axis div</div>
+    <!-- XPath: //span/parent::div -->
+    <div id="parent-axis"><span>Child span</span></div>
+    <!-- XPath: //div/ancestor::body -->
+    <div id="ancestor-axis">Ancestor div</div>
+    <!-- XPath: //h2/following-sibling::p -->
+    <h2>Heading 2</h2>
+    <p>Following sibling paragraph</p>
+    <!-- XPath: //h2/preceding-sibling::p -->
+    <p>Preceding sibling paragraph</p>
+    <h2>Heading 2</h2>
+
+    <!-- Functions -->
+    <!-- XPath: count(//div) -->
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <!-- XPath: //a[contains(@href, 'example')] -->
+    <a href="https://example.com">Example 1</a>
+    <a href="https://example.org">Example 2</a>
+    <!-- XPath: //a[starts-with(@href, 'https')] -->
+    <a href="https://example.net">Starts with HTTPS</a>
+
+    <!-- Grouping and Combining -->
+    <!-- XPath: //h1 | //h2 -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <!-- XPath: //(div | p)[@class='highlight'] -->
+    <div class="highlight">Highlighted Div</div>
+    <p class="highlight">Highlighted Paragraph</p>
+</body>
+</html>
